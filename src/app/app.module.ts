@@ -10,8 +10,8 @@ import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.com
 import { RecipeItemComponent } from "./recipes/recipe-list/recipe-item/recipe-item.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 import { ShoppingListEditComponent } from "./shopping-list/shopping-list-edit/shopping-list-edit.component";
-import { DropdownDirective } from './shared/dropdown.directive';
-import { ExampDirective } from './src/app/shared/examp.directive';
+import { DropdownDirective } from "./shared/dropdown.directive";
+import { ShoppingListService } from "./shopping-list/shopping-list.service";
 
 @NgModule({
   // prettier-ignore
@@ -24,11 +24,10 @@ import { ExampDirective } from './src/app/shared/examp.directive';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingListEditComponent,
-    DropdownDirective,
-    ExampDirective,
+    DropdownDirective
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
